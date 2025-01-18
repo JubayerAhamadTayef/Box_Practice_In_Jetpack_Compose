@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Box_In_Jetpack_ComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                    MyBox(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyBox(modifier: Modifier) {
-    Box(modifier = modifier.fillMaxSize(), ) {
+    Box(modifier = modifier.fillMaxSize().padding(horizontal = 5.dp)) {
         Spacer(
             modifier = modifier
                 .size(100.dp)
